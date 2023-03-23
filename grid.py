@@ -24,7 +24,10 @@ class Grid:
 
         Should also intialise the brush size to the DEFAULT provided as a class variable.
         """
-        raise NotImplementedError()
+        draw_style = self.draw_style
+        brush_size = DEFAULT_BRUSH_SIZE
+        x = 0 
+        y = 0
 
     def increase_brush_size(self):
         """
@@ -32,7 +35,10 @@ class Grid:
         if the brush size is already MAX_BRUSH,
         then do nothing.
         """
-        raise NotImplementedError()
+        if brush_size == MAX_BRUSH:
+            return
+        else:
+            brush_size += 1
 
     def decrease_brush_size(self):
         """
@@ -40,7 +46,10 @@ class Grid:
         if the brush size is already MIN_BRUSH,
         then do nothing.
         """
-        raise NotImplementedError()
+        if brush_size == MIN_BRUSH:
+            return
+        else:
+            brush_size -= 1
 
     def special(self):
         """
